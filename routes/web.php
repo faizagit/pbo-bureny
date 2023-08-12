@@ -32,4 +32,5 @@ Route::get('/home',[HomeController::class,'index_home'])->name('index_home');
 Route::get('/admin',[AdminController::class,'index_admin'])->name('index_admin');
 Route::get('/admin/absen',[AdminController::class,'index_absen'])->name('index_absen');
 Route::get('/admin/input',[AdminController::class,'index_input'])->name('index_input');
+Route::get('/admin/input/tambah',[AdminController::class,'index_tambahinput'])->name('index_tambahinput');
 Route::get('/admin/siswa',[AdminController::class,'index_siswa'])->name('index_siswa');

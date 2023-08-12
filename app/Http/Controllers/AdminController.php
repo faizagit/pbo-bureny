@@ -18,4 +18,7 @@ class AdminController extends Controller
     public function index_siswa(){
         return view('admin.siswa');
     }
+    public function index_tambahinput(){
+        return view('admin.tambahinput');
+    }
 }
