@@ -7,7 +7,9 @@
     <div class="main-wrapper">
         <div class="row">
             <div class="col">
-                <h1>siswa</h1>
+                <div class="card p-5">
+                    <h1>Siswa</h1>
+                </div>
             </div>
         </div>
     </div>

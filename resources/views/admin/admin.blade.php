@@ -80,21 +80,21 @@
             <div class="page-sidebar">
                 <ul class="list-unstyled accordion-menu">
                     <li class="sidebar-title">Siswa</li>
-                    <li>
+                    <li class="{{ (Route::current()->getName() == 'index_siswa') ? 'active-page' : '' }}">
                         <a href="{{ route('index_siswa') }}"
-                            ><i data-feather="home"></i>Data Siswa</a
+                            ><i data-feather="users"></i>Data Siswa</a
                         >
                     </li>
                     <li class="sidebar-title">Absen</li>
-                    <li>
+                    <li class="{{ (Route::current()->getName() == 'index_absen') ? 'active-page' : '' }}">
                         <a href="{{ route('index_absen') }}"
-                            ><i data-feather="home"></i>Absen Ekskul</a
+                            ><i data-feather="user-plus"></i>Absen Ekskul</a
                         >
                     </li>
                     <li class="sidebar-title">Input</li>
-                    <li>
+                    <li class="{{ (Route::current()->getName() == 'index_input') ? 'active-page' : '' }}">
                         <a href="{{ route('index_input') }}"
-                            ><i data-feather="inbox"></i>Input Ekskul</a
+                            ><i data-feather="folder-plus"></i>Input Ekskul</a
                         >
                     </li>
                 </ul>
@@ -103,13 +103,13 @@
         </div>
 
         <!-- Javascripts -->
-        <script src="../../assets/plugins/jquery/jquery-3.4.1.min.js"></script>
+        <script src="{{ asset('../../assets_admin/plugins/jquery/jquery-3.4.1.min.js') }}"></script>
         <script src="https://unpkg.com/@popperjs/core@2"></script>
-        <script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script src="{{ asset('../../assets_admin/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
         <script src="https://unpkg.com/feather-icons"></script>
-        <script src="../../assets/plugins/perfectscroll/perfect-scrollbar.min.js"></script>
-        <script src="../../assets/plugins/apexcharts/apexcharts.min.js"></script>
-        <script src="../../assets/js/main.min.js"></script>
-        <script src="../../assets/js/pages/dashboard.js"></script>
+        <script src="{{ asset('../../assets_admin/plugins/perfectscroll/perfect-scrollbar.min.js') }}"></script>
+        <script src="{{ asset('../../assets_admin/plugins/apexcharts/apexcharts.min.js') }}"></script>
+        <script src="{{ asset('../../assets_admin/js/main.min.js') }}"></script>
+        <script src="{{ asset('../../assets_admin/js/pages/dashboard.js') }}"></script>
     </body>
 </html>

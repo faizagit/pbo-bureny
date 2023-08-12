@@ -7,7 +7,11 @@
     <div class="main-wrapper">
         <div class="row">
             <div class="col">
-                <h1>input</h1>
+                <div class="card p-5">
+                    <div class="tambah-ekskul">
+                        <a href="" class="btn btn-success">Tambah Ekskul</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
