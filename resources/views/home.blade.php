@@ -5,10 +5,10 @@
 @section('content')
     <div class="container my-5">
         <div class="login d-flex justify-content-end">
-            <a href="{{ route('index_login') }}" class="btn btn-secondary" style="width: 200px; background-color: #f3a024; border: none;" >Login</a>
+            <a href="{{ route('index_login') }}" class="btn btn-success text-light" style="width: 200px; border: none;" >Login</a>
         </div>
-        <div class="title mb-5">
-            <h1 class="text-center fw-bold">Ekstrakurikuler</h1>
+        <div class="title mb-5 d-flex justify-content-center">
+            <h1 class="text-center text-light fw-bold bg-danger p-3 rounded-pill">Ekstrakurikuler</h1>
         </div>
         <div class="body row">
             <div class="col-4 mb-4">
