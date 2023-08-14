@@ -19,7 +19,12 @@
                     <div class="mb-3">
                         <label for="formFile" class="form-label">Gambar Ekskul</label>
                         <input class="form-control" type="file" id="formFile">
-                      </div>
+                    </div>
+                    <div class="mb-3">
+                        <a href="{{ route('index_input') }}">
+                            <button class="btn btn-info">Submit</button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

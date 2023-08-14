@@ -23,31 +23,37 @@
                                 <div class="table-ekskul">
                                     <table class="table table-striped">
                                         <thead>
-                                          <tr>
+                                          <tr class="text-center">
                                             <th scope="col">#</th>
                                             <th scope="col">Nama</th>
                                             <th scope="col">Kelas</th>
-                                            <th scope="col">Keterangan</th>
+                                            <th scope="col" class="text-center">Keterangan</th>
                                           </tr>
                                         </thead>
                                         <tbody>
-                                          <tr>
+                                          <tr class="text-center">
                                             <th scope="row">1</th>
                                             <td>Faiz</td>
                                             <td>XII RPL 1</td>
-                                            <td class="text-success">Absen</td>
+                                            <td class="text-success text-center">
+                                              <span class="badge bg-success fs-6"> Absen </span>
+                                            </td>
                                           </tr>
-                                          <tr>
+                                          <tr class="text-center">
                                             <th scope="row">2</th>
                                             <td>Satiria</td>
                                             <td>XI MM 1</td>
-                                            <td class="text-danger">Izin</td>
+                                            <td class="text-danger text-center">
+                                              <span class="badge bg-danger fs-6"> Izin </span>
+                                            </td>
                                           </tr>
-                                          <tr>
+                                          <tr class="text-center">
                                             <th scope="row">3</th>
                                             <td>Tasmuin</td>
                                             <td> X BDP 3</td>
-                                            <td class="text-danger">Izin</td>
+                                            <td class="text-danger text-center">
+                                              <span class="badge bg-danger fs-6"> Izin </span>
+                                            </td>
                                           </tr>
                                         </tbody>
                                       </table>
