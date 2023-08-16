@@ -12,6 +12,9 @@ class AdminController extends Controller
     public function index_absen(){
         return view('admin.absen');
     }
+    public function index_ekskul(){
+        return view('admin.ekskul');
+    }
     public function index_input(){
         return view('admin.input');
     }

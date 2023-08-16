@@ -42,9 +42,15 @@
             href="{{ asset('../../assets_admin/css/main.min.css') }}"
             rel="stylesheet"
         />
+        <script src="{{ asset('../../assets_admin/plugins/jquery/jquery-3.4.1.min.js') }}"></script>
+
         <link
             href="{{ asset('../../assets_admin/css/custom.css') }}"
             rel="stylesheet"
+        />
+        <link 
+            href="{{ asset('../../assets_admin/css/style.css') }}"
+            rel="stylesheet" 
         />
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -82,7 +88,7 @@
                     <li class="sidebar-title">Siswa</li>
                     <li class="{{ (Route::current()->getName() == 'index_siswa') ? 'active-page' : '' }}">
                         <a href="{{ route('index_siswa') }}"
-                            ><i data-feather="users"></i>Data Siswa</a
+                            ><i data-feather="users"></i>Data User</a
                         >
                     </li>
                     <li class="sidebar-title">Absen</li>

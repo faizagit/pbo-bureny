@@ -1,0 +1,27 @@
+.card-ekskul {
+    background-image: url("../images/balbalan.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* border: 1px solid black; */
+    /* transition: 1s ease-in-out; */
+}
+
+/* .card-image {
+    width: 100%;
+
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(8,8,122,0) 100%);
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+
+} */
+
+#card-ekskul:hover {
+    width: 100%;
+    /* background: rgb(2,0,36); */
+    /* background-image: url("../images/balbalan.jpg"); */
+    border-radius: 15px;
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(8,8,122,0) 100%);
+opacity: 1;
+/* transition: 1s ease-in-out; */
+
+}
