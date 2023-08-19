@@ -22,24 +22,18 @@
                               </tr>
                             </thead>
                             <tbody>
+                              @forelse ($ekskul as $item)
                               <tr>
-                                <th scope="row">1</th>
-                                <td>Futsal</td>
-                                <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, exercitationem animi officia quo eos culpa voluptas odio dolorem, non natus neque libero alias.</td>
-                                <td>futsal.jpg</td>
+                                <th scope="row">{{$loop->iteration}}</th>
+                                <td>{{ $item->nm_ekskul }}</td>
+                                <td>{{ $item->deskripsi }}</td>
+                                <td><img src="{{asset('storage/gambar_ekskul/' . $item->gambar)}}" width="200px" alt="location-team"></td>
                               </tr>
+                              @empty
                               <tr>
-                                <th scope="row">2</th>
-                                <td>badminton</td>
-                                <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima natus officiis sed ab accusantium illum autem consequuntur suscipit repellat eos quis, vel exercitationem.</td>
-                                <td>badminton.jpg</td>
+                                <th scope="row" colspan="4">Data belum tersedia</th>
                               </tr>
-                              <tr>
-                                <th scope="row">3</th>
-                                <td>taekwondo</td>
-                                <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis aliquid sunt, modi tenetur non pariatur commodi fuga sint at. Accusamus assumenda sint quibusdam.</td>
-                                <td>taekwondo.jpg</td>
-                              </tr>
+                              @endforelse
                             </tbody>
                           </table>
                     </div>

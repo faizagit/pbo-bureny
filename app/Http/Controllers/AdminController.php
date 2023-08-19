@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ekstrakurikuler;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -13,7 +14,8 @@ class AdminController extends Controller
         return view('admin.absen');
     }
     public function index_input(){
-        return view('admin.input');
+        $ekskul = Ekstrakurikuler::latest()->paginate(5);
+        return view('admin.input', compact('ekskul'));
     }
     public function index_siswa(){
         return view('admin.siswa');
