@@ -2,6 +2,7 @@
     background-image: url("../images/balbalan.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    /* animation: 1s; */
     /* border: 1px solid black; */
     /* transition: 1s ease-in-out; */
 }
@@ -20,8 +21,12 @@
     /* background: rgb(2,0,36); */
     /* background-image: url("../images/balbalan.jpg"); */
     border-radius: 15px;
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(8,8,122,0) 100%);
-opacity: 1;
-/* transition: 1s ease-in-out; */
+    background: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(8, 8, 122, 0) 100%
+    );
+    opacity: 1;
 
+    /* transition: 1s ease-in-out; */
 }

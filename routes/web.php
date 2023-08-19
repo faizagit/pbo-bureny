@@ -31,9 +31,12 @@ Route::get('/home',[HomeController::class,'index_home'])->name('index_home');
 //admin
 Route::get('/admin',[AdminController::class,'index_admin'])->name('index_admin');
 Route::get('/admin/absen',[AdminController::class,'index_absen'])->name('index_absen');
-Route::get('/admin/absen/ekskul',[AdminController::class,'index_ekskul'])->name('index_absen');
+Route::get('/admin/absen/ekskul',[AdminController::class,'index_ekskul'])->name('index_ekskul');
 Route::get('/admin/input',[AdminController::class,'index_input'])->name('index_input');
 Route::get('/admin/input/tambah',[AdminController::class,'index_tambahinput'])->name('index_tambahinput');
 Route::get('/admin/siswa',[AdminController::class,'index_siswa'])->name('index_siswa');
 
-
+//anggota
+Route::get('/anggota/1',[HomeController::class,'index_dashboard'])->name('index_dashboard');
+Route::get('/anggota/2',[HomeController::class,'index_dashboard2'])->name('index_dashboard2');
+Route::get('/anggota/3',[HomeController::class,'index_dashboard3'])->name('index_dashboard3');

@@ -1,6 +1,6 @@
-@extends('template.template')
+@extends('auth.template-login')
 
-@section('title','Regsiter')
+@section('title', 'Register')
 
 @section('content')
     <div class="login mx-auto my-5" style=" width:60%">
@@ -10,7 +10,8 @@
                     <div class="d-flex">
                         <div class="col">
                             <div class="img">
-                                <img src="{{ asset("assets/img/wp-login.jpg") }}" alt="" style="max-width: 400px; ">
+                                <img src="{{ asset('../assets/img/wp-login.jpg') }}" alt=""
+                                    style="max-width: 400px; ">
                             </div>
                         </div>
                         <div class="col p-4 ">
@@ -20,23 +21,27 @@
                             <form>
                                 <div class="form">
                                     <div class="mb-3">
-                                      <label for="exampleInputEmail1" class="form-label ">Nama</label>
-                                      <input type="email" class="form-control rounded-pill" id="exampleInputEmail1" aria-describedby="emailHelp" autofocus>
+                                        <label for="exampleInputEmail1" class="form-label ">Nama</label>
+                                        <input type="email" class="form-control rounded-pill" id="exampleInputEmail1"
+                                            aria-describedby="emailHelp" autofocus>
                                     </div>
                                     <div class="mb-3">
-                                      <label for="exampleInputEmail1" class="form-label ">Kelas</label>
-                                      <input type="email" class="form-control rounded-pill" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <label for="exampleInputEmail1" class="form-label ">Kelas</label>
+                                        <input type="email" class="form-control rounded-pill" id="exampleInputEmail1"
+                                            aria-describedby="emailHelp">
                                     </div>
                                     <div class="mb-3">
-                                      <label for="exampleInputEmail1" class="form-label ">Username</label>
-                                      <input type="email" class="form-control rounded-pill" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <label for="exampleInputEmail1" class="form-label ">Username</label>
+                                        <input type="email" class="form-control rounded-pill" id="exampleInputEmail1"
+                                            aria-describedby="emailHelp">
                                     </div>
                                     <div class="mb-3">
-                                      <label for="exampleInputPassword1" class="form-label ">Password</label>
-                                      <input type="password" class="form-control rounded-pill" id="exampleInputPassword1">
+                                        <label for="exampleInputPassword1" class="form-label ">Password</label>
+                                        <input type="password" class="form-control rounded-pill" id="exampleInputPassword1">
                                     </div>
                                     <div class="login d-flex justify-content-center mt-3">
-                                        <a href="{{ route('index_login') }}" class="btn btn-danger w-100 rounded-pill">Register</a>
+                                        <a href="{{ route('index_login') }}"
+                                            class="btn btn-danger w-100 rounded-pill">Register</a>
                                     </div>
                                     {{-- <div class="register text-center">
                                         belum punya akun? <a href="{{ route('register') }}">Register sekarang</a>
