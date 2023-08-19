@@ -13,6 +13,9 @@ class AdminController extends Controller
     public function index_absen(){
         return view('admin.absen');
     }
+    public function index_ekskul(){
+        return view('admin.ekskul');
+    }
     public function index_input(){
         $ekskul = Ekstrakurikuler::latest()->paginate(5);
         return view('admin.input', compact('ekskul'));

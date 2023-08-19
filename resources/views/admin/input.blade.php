@@ -1,7 +1,7 @@
 @extends('admin.admin')
 
-@section('title','input absen')
-    
+@section('title', 'input absen')
+
 @section('content')
 <div class="page-content">
     <div class="main-wrapper">
@@ -19,6 +19,8 @@
                                 <th scope="col">Nama Eskul</th>
                                 <th scope="col">Deskripsi Ekskul</th>
                                 <th scope="col">Gambar Ekskul</th>
+                                <th scope="col">Jadwal</th>
+                                <th scope="col">Keterangan</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -28,6 +30,16 @@
                                 <td>{{ $item->nm_ekskul }}</td>
                                 <td>{{ $item->deskripsi }}</td>
                                 <td><img src="{{asset('storage/gambar_ekskul/' . $item->gambar)}}" width="200px" alt="location-team"></td>
+                                <td>
+                                    <div class="d-flex gap-2">
+                                        <div class="update d-flex align-items-center">
+                                            <button class="btn btn-primary" type="submit"> Edit</button>
+                                        </div>
+                                        <div class="delete">
+                                            <button class="btn btn-danger" type="submit"> Delete</button>
+                                        </div>
+                                    </div>
+                                </td>
                               </tr>
                               @empty
                               <tr>
@@ -41,5 +53,4 @@
             </div>
         </div>
     </div>
-</div>
 @endsection

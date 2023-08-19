@@ -1,6 +1,6 @@
-@extends('template.template')
+@extends('auth.template-login')
 
-@section('title','Login')
+@section('title', 'Login')
 
 @section('content')
     <div class="login mx-auto my-5" style=" width:60%">
@@ -16,7 +16,8 @@
                     <div class="d-flex">
                         <div class="col">
                             <div class="img">
-                                <img src="{{ asset("assets/img/wp-login.jpg") }}" alt="" style="max-width: 400px; ">
+                                <img src="{{ asset('../assets/img/wp-login.jpg') }}" alt=""
+                                    style="max-width: 400px; ">
                             </div>
                         </div>
                         <div class="col p-4 ">

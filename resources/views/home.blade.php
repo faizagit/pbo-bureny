@@ -1,12 +1,9 @@
 @extends('template.template')
 
-@section('title','Home')
-    
+@section('title', 'Home')
+
 @section('content')
     <div class="container my-5">
-        <div class="login d-flex justify-content-end">
-            <a href="{{ route('index_login') }}" class="btn btn-success text-light" style="width: 200px; border: none;" >Login</a>
-        </div>
         <div class="title mb-5 d-flex justify-content-center">
             <h1 class="text-center text-light fw-bold bg-danger p-3 rounded-pill">Ekstrakurikuler</h1>
         </div>
@@ -41,6 +38,14 @@
                 <div class="modal-body">
                     <div class="image-modal">
                         <img class="w-100 rounded" src="{{asset('storage/gambar_ekskul/' . $item->gambar)}}" alt="salah oi">
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-start">
+                    <div class="jadwal">
+                        Jadwal : Sabtu. 19-08-2023.
+                    </div>
+                    <div class="jam">
+                        10.00
                     </div>
                 </div>
                 <div class="modal-footer">
