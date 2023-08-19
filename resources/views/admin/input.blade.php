@@ -19,6 +19,7 @@
                                         <th scope="col">Nama Eskul</th>
                                         <th scope="col">Deskripsi Ekskul</th>
                                         <th scope="col">Gambar Ekskul</th>
+                                        <th scope="col">Jadwal</th>
                                         <th scope="col">Keterangan</th>
                                     </tr>
                                 </thead>
@@ -30,6 +31,7 @@
                                             exercitationem animi officia quo eos culpa voluptas odio dolorem, non natus
                                             neque libero alias.</td>
                                         <td>futsal.jpg</td>
+                                        <td style="width: 180px">Sabtu, 19-08-2023. Jam 10.00</td>
                                         <td>
                                             <div class="d-flex gap-2">
                                                 <div class="update d-flex align-items-center">
@@ -48,6 +50,7 @@
                                             sed ab accusantium illum autem consequuntur suscipit repellat eos quis, vel
                                             exercitationem.</td>
                                         <td>badminton.jpg</td>
+                                        <td style="width: 180px">Sabtu, 19-08-2023. Jam 10.00</td>
                                         <td>
                                             <div class="d-flex gap-2">
                                                 <div class="update d-flex align-items-center">
@@ -66,6 +69,7 @@
                                             sunt, modi tenetur non pariatur commodi fuga sint at. Accusamus assumenda sint
                                             quibusdam.</td>
                                         <td>taekwondo.jpg</td>
+                                        <td style="width: 180px">Sabtu, 19-08-2023. Jam 10.00</td>
                                         <td>
                                             <div class="d-flex gap-2">
                                                 <div class="update d-flex align-items-center">

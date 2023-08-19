@@ -136,11 +136,18 @@
                             <img class="w-100 rounded" src="{{ asset('assets/img/balbalan.jpg') }}" alt="salah oi">
                         </div>
                     </div>
+                    <div class="modal-footer d-flex justify-content-start">
+                        <div class="jadwal">
+                            Jadwal : Sabtu. 19-08-2023.
+                        </div>
+                        <div class="jam">
+                            10.00
+                        </div>
+                    </div>
                     <div class="modal-footer">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque molestias aliquid quod
-                        voluptatum laboriosam dolorem error libero magnam perferendis corrupti. Architecto molestiae
-                        voluptates neque modi iure delectus placeat voluptatum dolor.
-                        <p></p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque molestias aliquid quod
+                            voluptatum laboriosam dolorem error libero magnam perferendis corrupti. Architecto molestiae
+                            voluptates neque modi iure delectus placeat voluptatum dolor.</p>
                     </div>
                 </div>
             </div>
