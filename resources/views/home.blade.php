@@ -9,52 +9,56 @@
         </div>
         <div class="body row">
             @foreach ($ekskul as $item)
-            <div class="col-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="img pb-3">
-                            <img src="{{asset('storage/gambar_ekskul/' . $item->gambar)}}" class="rounded" style="max-width: 100%;" alt="">
-                        </div>
-                        <div class="desc">
-                            <p>{{ $item->deskripsi }}<b>...</b></p>
-                        </div>
-                        <div class="detail d-flex mb-4" style="height: 20px">
-                            <a class="text-decoration-none detail-hover fs-5 "  href="" data-bs-toggle="modal" data-bs-target="#modal{{ $item->id }}">Detail
-                            </a>
+                <div class="col-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="img pb-3">
+                                <img src="{{ asset('storage/gambar_ekskul/' . $item->gambar) }}" class="rounded"
+                                    style="max-width: 100%;" alt="">
+                            </div>
+                            <div class="desc">
+                                <p>{{ $item->deskripsi }}<b>...</b></p>
+                            </div>
+                            <div class="detail d-flex mb-4" style="height: 20px">
+                                <a class="text-decoration-none detail-hover fs-5 " href="" data-bs-toggle="modal"
+                                    data-bs-target="#modal{{ $item->id }}">Detail
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             @endforeach
         </div>
         @foreach ($ekskul as $item)
-        <div class="modal fade " id="modal{{ $item->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">{{ $item->nm_ekskul }}</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="image-modal">
-                        <img class="w-100 rounded" src="{{asset('storage/gambar_ekskul/' . $item->gambar)}}" alt="salah oi">
+            <div class="modal fade " id="modal{{ $item->id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">{{ $item->nm_ekskul }}</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="image-modal">
+                                <img class="w-100 rounded" src="{{ asset('storage/gambar_ekskul/' . $item->gambar) }}"
+                                    alt="salah oi">
+                            </div>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-start">
+                            <div class="jadwal">
+                                Jadwal : Sabtu. 19-08-2023.
+                            </div>
+                            <div class="jam">
+                                10.00
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            {{ $item->deskripsi }}
+                            <p></p>
+                        </div>
                     </div>
                 </div>
-                <div class="modal-footer d-flex justify-content-start">
-                    <div class="jadwal">
-                        Jadwal : Sabtu. 19-08-2023.
-                    </div>
-                    <div class="jam">
-                        10.00
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    {{ $item->deskripsi }}
-                    <p></p>
-                </div>
-              </div>
             </div>
-        </div>
         @endforeach
     </div>
 @endsection
