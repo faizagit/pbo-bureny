@@ -22,36 +22,79 @@
                                 @csrf
                                 <div class="form">
                                     <div class="mb-3">
-                                      <label for="exampleInputEmail1" class="form-label ">Nama</label>
-                                      <input type="text" name="nama" class="form-control rounded-pill @error('nama') is-invalid @enderror" id="nama" aria-describedby="emailHelp" autofocus required value="{{ old('nama') }}">
-                                      @error('nama')
-                                        <div class="invalid-feedback">{{ $message }}</div>
-                                      @enderror
+                                        <label for="exampleInputEmail1" class="form-label ">Nama</label>
+                                        <input type="text" name="nama"
+                                            class="form-control rounded-pill @error('nama') is-invalid @enderror"
+                                            id="nama" aria-describedby="emailHelp" autofocus required
+                                            value="{{ old('nama') }}">
+
+                                        @error('nama')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
                                     </div>
-                                    <div class="mb-3">
-                                      <label for="exampleInputEmail1" class="form-label ">Kelas</label>
-                                      <input type="text" name="kelas" class="form-control rounded-pill @error('kelas') is-invalid @enderror" id="kelas" aria-describedby="emailHelp" required value="{{ old('kelas') }}">
-                                      @error('kelas')
-                                        <div class="invalid-feedback">
-                                            {{ $message }}
+                                    <div class="d-flex gap-3">
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label ">Kelas</label>
+                                            {{-- <input type="text" name="kelas"
+                                                class="form-control rounded-pill @error('kelas') is-invalid @enderror"
+                                                id="kelas" aria-describedby="emailHelp" required
+                                                value="{{ old('kelas') }}"> --}}
+                                            <div class="dropdown">
+                                                <button class="btn dropdown-toggle border " type="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Kelas
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">X</a></li>
+                                                    <li><a class="dropdown-item" href="#">XI</a></li>
+                                                    <li><a class="dropdown-item" href="#">XII</a></li>
+                                                </ul>
+                                            </div>
+                                            @error('kelas')
+                                                <div class="invalid-feedback">
+                                                    {{ $message }}
+                                                </div>
+                                            @enderror
                                         </div>
-                                      @enderror
-                                    </div>
-                                    <div class="mb-3">
-                                      <label for="exampleInputEmail1" class="form-label ">Username</label>
-                                      <input type="text" name="username" class="form-control rounded-pill @error('username') is-invalid @enderror" id="username" aria-describedby="emailHelp" required value="{{ old('username') }}">
-                                      @error('username')
-                                      <div class="invalid-feedback">{{ $message }}</div>
-                                      @enderror
-                                    </div>
-                                    <div class="mb-3">
-                                      <label for="exampleInputPassword1" class="form-label ">Password</label>
-                                      <input type="password" name="password" class="form-control rounded-pill @error('password') is-invalid @enderror" id="password" required>
-                                      @error('password')
-                                        <div class="invalid-feedback">
-                                            {{ $message }}
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label ">Jurusan</label>
+                                            {{-- <input type="text" name="kelas"
+                                                class="form-control rounded-pill @error('kelas') is-invalid @enderror"
+                                                id="kelas" aria-describedby="emailHelp" required
+                                                value="{{ old('kelas') }}"> --}}
+                                            <div class="dropdown">
+                                                <button class="btn dropdown-toggle border " type="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Jurusan
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">RPL 1</a></li>
+                                                    <li><a class="dropdown-item" href="#">RPL 2</a></li>
+                                                    <li><a class="dropdown-item" href="#">RPL 3</a></li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                      @enderror
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label ">Username</label>
+                                        <input type="text" name="username"
+                                            class="form-control rounded-pill @error('username') is-invalid @enderror"
+                                            id="username" aria-describedby="emailHelp" required
+                                            value="{{ old('username') }}">
+                                        @error('username')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleInputPassword1" class="form-label ">Password</label>
+                                        <input type="password" name="password"
+                                            class="form-control rounded-pill @error('password') is-invalid @enderror"
+                                            id="password" required>
+                                        @error('password')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
                                     </div>
                                     <div class="login d-flex justify-content-center mt-3">
                                         <button class="btn btn-danger w-100 rounded-pill" type="submit">Register</button>
