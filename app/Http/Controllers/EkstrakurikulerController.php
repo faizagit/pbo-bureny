@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Ekstrakurikuler;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class EkstrakurikulerController extends Controller
 {
@@ -24,10 +25,27 @@ class EkstrakurikulerController extends Controller
         return redirect('/admin/input');
     }
 
-    public function update(Ekstrakurikuler $ekskul){
-        Ekstrakurikuler::destroy($ekskul->id);
+    public function delete(Ekstrakurikuler $ekskul, $id){
+        $ekskul = Ekstrakurikuler::findOrFail($id);
+        // dd($ekskul);
+        Storage::disk('local')->delete('public/gambar_ekskul/'.$ekskul->image);
+        $ekskul->delete();
+
+        if($ekskul){
+            //redirect dengan pesan sukses
+            return redirect()->route('index_input')->with(['success' => 'Data Berhasil Dihapus!']);
+        }else{
+            //redirect dengan pesan error
+            return redirect()->route('index_input')->with(['error' => 'Data Gagal Dihapus!']);
+        }
     }
-    public function destroy(Ekstrakurikuler $ekskul){
+
+    public function edit(Ekstrakurikuler $ekskul)
+    {
+        return view('blog.edit', compact('blog'));
+    }
+
+    public function update(Ekstrakurikuler $ekskul){
         Ekstrakurikuler::destroy($ekskul->id);
     }
 }

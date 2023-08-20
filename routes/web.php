@@ -37,6 +37,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/admin/absen',[AdminController::class,'index_absen'])->name('index_absen');
     Route::get('/admin/absen/ekskul',[AdminController::class,'index_ekskul'])->name('index_ekskul');
     Route::get('/admin/input',[AdminController::class,'index_input'])->name('index_input');
+    Route::delete('/admin/input/{id}',[EkstrakurikulerController::class,'delete'])->name('delete_ekskul');
     Route::get('/admin/input/tambah',[AdminController::class,'index_tambahinput'])->name('index_tambahinput');
     Route::post('/admin/input/tambah',[EkstrakurikulerController::class,'create'])->name('create_ekskul');
     Route::get('/admin/siswa',[AdminController::class,'index_siswa'])->name('index_siswa');

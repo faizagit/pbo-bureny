@@ -24,6 +24,19 @@ class User extends Authenticatable
         'password',
     ];
 
+    public function ekskul1()
+    {
+        return $this->belongsTo(Ekstrakurikuler::class, 'eksul1');
+    }
+    public function ekskul2()
+    {
+        return $this->belongsTo(Ekstrakurikuler::class, 'eksul1');
+    }
+    public function ekskul3()
+    {
+        return $this->belongsTo(Ekstrakurikuler::class, 'eksul1');
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *

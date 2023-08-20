@@ -29,7 +29,7 @@
                                 <div class="form">
                                     <div class="mt-5">
                                       <label for="exampleInputEmail1" class="form-label ">Username</label>
-                                      <input type="email" class="form-control rounded-pill" name="username" id="exampleInputEmail1" aria-describedby="emailHelp" autofocus>
+                                      <input type="text" class="form-control rounded-pill" name="username" id="exampleInputEmail1" aria-describedby="emailHelp" autofocus>
                                     </div>
                                     <div class="mt-4">
                                       <label for="exampleInputPassword1" class="form-label ">Password</label>

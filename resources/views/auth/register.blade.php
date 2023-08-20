@@ -39,7 +39,7 @@
                                     </div>
                                     <div class="mb-3">
                                       <label for="exampleInputEmail1" class="form-label ">Username</label>
-                                      <input type="email" name="username" class="form-control rounded-pill @error('username') is-invalid @enderror" id="username" aria-describedby="emailHelp" required value="{{ old('username') }}">
+                                      <input type="text" name="username" class="form-control rounded-pill @error('username') is-invalid @enderror" id="username" aria-describedby="emailHelp" required value="{{ old('username') }}">
                                       @error('username')
                                       <div class="invalid-feedback">{{ $message }}</div>
                                       @enderror
