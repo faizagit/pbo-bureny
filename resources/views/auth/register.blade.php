@@ -3,7 +3,7 @@
 @section('title', 'Register')
 
 @section('content')
-    <div class="login mx-auto my-5" style=" width:60%">
+    <div class="login mx-auto my-5" style=" width:75%">
         <div class="container">
             <div class="card">
                 <div class="card-body p-0">
@@ -11,7 +11,7 @@
                         <div class="col">
                             <div class="img">
                                 <img src="{{ asset('../assets/img/wp-login.jpg') }}" alt=""
-                                    style="max-width: 400px; ">
+                                    style="max-height: 600px; ">
                             </div>
                         </div>
                         <div class="col p-4 ">
@@ -73,6 +73,29 @@
                                                     <li><a class="dropdown-item" href="#">RPL 3</a></li>
                                                 </ul>
                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label ">Pilih Ekskul</label>
+                                        <div class="select">
+                                            <select name="" id="" class="border  p-2 rounded">
+                                                <option value="0">Pilih Ekskul 1</option>
+                                                <option value="1">Futsal</option>
+                                                <option value="2">Futsal</option>
+                                                <option value="3">Futsal</option>
+                                            </select>
+                                            <select name="" id="" class="border  p-2 rounded">
+                                                <option value="0">Pilih Ekskul 2</option>
+                                                <option value="1">Futsal</option>
+                                                <option value="2">Futsal</option>
+                                                <option value="3">Futsal</option>
+                                            </select>
+                                            <select name="" id="" class="border  p-2 rounded">
+                                                <option value="0">Pilih Ekskul 3</option>
+                                                <option value="1">Futsal</option>
+                                                <option value="2">Futsal</option>
+                                                <option value="3">Futsal</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="mb-3">
