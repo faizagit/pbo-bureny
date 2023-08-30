@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ekstrakurikuler;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -21,6 +22,7 @@ class AdminController extends Controller
         return view('admin.input', compact('ekskul'));
     }
     public function index_siswa(){
+        $user = User::with('')->latest()->paginate(5);
         return view('admin.siswa');
     }
     public function index_tambahinput(){

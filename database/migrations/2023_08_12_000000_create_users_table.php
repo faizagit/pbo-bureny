@@ -17,6 +17,14 @@ return new class extends Migration
             $table->id();
             $table->string('nama');
             $table->string('kelas');
+            $table->unsignedBigInteger('jurusan_id');
+            $table->foreign('jurusan_id')->references('id')->on('jurusans');
+            $table->unsignedBigInteger('ekskul1');
+            $table->foreign('ekskul1')->references('id')->on('ekstrakurikulers');
+            $table->unsignedBigInteger('ekskul2')->nullable();
+            $table->foreign('ekskul2')->references('id')->on('ekstrakurikulers');
+            $table->unsignedBigInteger('ekskul3')->nullable();
+            $table->foreign('ekskul3')->references('id')->on('ekstrakurikulers');
             $table->string('username')->unique();
             $table->string('password');
             $table->enum('role', ['user', 'admin'])->default('user');

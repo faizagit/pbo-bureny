@@ -30,13 +30,18 @@
                                 <td>{{ $item->nm_ekskul }}</td>
                                 <td>{{ $item->deskripsi }}</td>
                                 <td><img src="{{asset('storage/gambar_ekskul/' . $item->gambar)}}" width="200px" alt="location-team"></td>
+                                <td style="width: 180px">Sabtu, 19-08-2023. Jam 10.00</td>
                                 <td>
                                     <div class="d-flex gap-2">
                                         <div class="update d-flex align-items-center">
                                             <button class="btn btn-primary" type="submit"> Edit</button>
                                         </div>
                                         <div class="delete">
-                                            <button class="btn btn-danger" type="submit"> Delete</button>
+                                            <form action="{{ route('delete_ekskul', ['id' => $item->id]) }}" method="post">
+                                                @method('delete')
+                                                @csrf
+                                                <button class="btn btn-danger" onclick="return confirm('Are you sure?')"> Delete</button>
+                                            </form>
                                         </div>
                                     </div>
                                 </td>
