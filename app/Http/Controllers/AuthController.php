@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ekstrakurikuler;
+use App\Models\Jurusan;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -13,7 +15,9 @@ class AuthController extends Controller
         return view('auth.login');
     }
     public function index_register(){
-        return view('auth.register');
+        $jurusans = Jurusan::all();
+        $ekskuls = Ekstrakurikuler::all();
+        return view('auth.register', compact('jurusans', 'ekskuls'));
     }
 
     public function store(Request $request){
@@ -22,6 +26,10 @@ class AuthController extends Controller
             'kelas' => 'required|max:255',
             'username' => 'required|min:5|max:255',
             'password' => 'required|min:5|max:255',
+            'jurusan_id'=> 'required',
+            'ekskul1' => 'required',
+            'ekskul2' => 'required',
+            'ekskul3' => 'required',
         ]);
 
         // $validatedData['password'] = bcrypt($validatedData['password']);

@@ -20,8 +20,8 @@ class IzinController extends Controller
         $validatedData = $request->validate([
             'alasan' => 'required',
         ]);
-        // $today = Carbon::now()->isoFormat('dddd');
-        $today = 'Sabtu';
+        $today = Carbon::now()->isoFormat('dddd');
+        // $today = 'Sabtu';
         // dd($today);
         $hadir = Absensi::where(['user_id' => $user, 'tanggal' => date('Y-m-d'), 'keterangan' => 'Hadir', 'ekstrakurikuler_id' => $ekskul->id])->first();
         $izin = Absensi::where(['user_id' => $user, 'tanggal' => date('Y-m-d'), 'keterangan' => 'Sakit', 'ekstrakurikuler_id' => $ekskul->id])->first();

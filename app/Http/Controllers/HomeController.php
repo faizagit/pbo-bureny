@@ -21,10 +21,16 @@ class HomeController extends Controller
         return view('anggota.dashboard', compact('ekskul', 'pengumuman'));
     }
     public function index_dashboard2(){
-        return view('anggota.dashboard2');
+        $user = Auth::id();
+        $ekskul = User::where('id', $user)->with('ekskulpertama', 'ekskulkedua', 'ekskulketiga')->first();
+        $pengumuman = Pengumuman::where('ekstrakurikuler_id', $ekskul->ekskul2)->get();
+        return view('anggota.dashboard2', compact('ekskul', 'pengumuman'));
     }
     public function index_dashboard3(){
-        return view('anggota.dashboard3');
+        $user = Auth::id();
+        $ekskul = User::where('id', $user)->with('ekskulpertama', 'ekskulkedua', 'ekskulketiga')->first();
+        $pengumuman = Pengumuman::where('ekstrakurikuler_id', $ekskul->ekskul3)->get();
+        return view('anggota.dashboard3', compact('ekskul', 'pengumuman'));
     }
     
 }

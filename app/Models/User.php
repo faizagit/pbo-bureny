@@ -23,6 +23,10 @@ class User extends Authenticatable
         'kelas',
         'username',
         'password',
+        'jurusan_id',
+        'ekskul1',
+        'ekskul2',
+        'ekskul3',
     ];
 
     public function jurusan()
