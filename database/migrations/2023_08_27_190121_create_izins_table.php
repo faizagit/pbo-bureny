@@ -13,16 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('absensis', function (Blueprint $table) {
+        Schema::create('izins', function (Blueprint $table) {
             $table->id();
             $table->date('tanggal');
-            $table->enum('keterangan', ['Hadir', 'Sakit', 'Tidak Hadir']);
-            $table->time('jam_absen');
+            $table->string('alasan');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->unsignedBigInteger('ekstrakurikuler_id');
             $table->foreign('ekstrakurikuler_id')->references('id')->on('ekstrakurikulers');
-
             $table->timestamps();
         });
     }
@@ -34,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('absensis');
+        Schema::dropIfExists('izins');
     }
 };

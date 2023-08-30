@@ -14,4 +14,8 @@ class Ekstrakurikuler extends Model
     public function user(){
         return $this->hasMany(User::class);
     }
+    
+    public function pengumuman(){
+        return $this->hasMany(Pengumuman::class);
+    }
 }

@@ -19,18 +19,21 @@
                     <img src="{{ asset('assets/img/logo-ekskul.png') }}" alt="" style="width: 50px;">
                 </a>
                 <form class="d-flex">
+                    @auth
+                    <div class="login d-flex justify-content-end mx-1">
+                        <a href="{{ route('index_dashboard') }}" class="btn btn-warning text-light"
+                        style="width: 200px; border: none;">Dashboard</a>
+                    </div>
+                    <div class="logout d-flex justify-content-end">
+                        <a href="{{ route('logout') }}" class="btn btn-danger text-light"
+                        style="width: 200px; border: none;">Logout</a>
+                    </div>
+                    @else
                     <div class="login d-flex justify-content-end mx-1">
                         <a href="{{ route('index_login') }}" class="btn btn-success text-light"
                             style="width: 200px; border: none;">Login</a>
                     </div>
-                    <div class="login d-flex justify-content-end mx-1">
-                        <a href="{{ route('index_dashboard') }}" class="btn btn-warning text-light"
-                            style="width: 200px; border: none;">Dashboard</a>
-                    </div>
-                    {{-- <div class="logout d-flex justify-content-end">
-                        <a href="{{ route('index_login') }}" class="btn btn-danger text-light"
-                            style="width: 200px; border: none;">Logout</a>
-                    </div> --}}
+                    @endauth
                 </form>
             </div>
         </nav>

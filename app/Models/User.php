@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Ekstrakurikuler;
 
 class User extends Authenticatable
 {
@@ -24,17 +25,21 @@ class User extends Authenticatable
         'password',
     ];
 
-    public function ekskul1()
+    public function jurusan()
     {
-        return $this->belongsTo(Ekstrakurikuler::class, 'eksul1');
+        return $this->belongsTo(Jurusan::class, 'jurusan_id', 'id');
     }
-    public function ekskul2()
+    public function ekskulpertama()
     {
-        return $this->belongsTo(Ekstrakurikuler::class, 'eksul1');
+        return $this->belongsTo(Ekstrakurikuler::class, 'ekskul1', 'id');
     }
-    public function ekskul3()
+    public function ekskulkedua()
     {
-        return $this->belongsTo(Ekstrakurikuler::class, 'eksul1');
+        return $this->belongsTo(Ekstrakurikuler::class, 'ekskul2', 'id');
+    }
+    public function ekskulketiga()
+    {
+        return $this->belongsTo(Ekstrakurikuler::class, 'ekskul3', 'id');
     }
 
     /**

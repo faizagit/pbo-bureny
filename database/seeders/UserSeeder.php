@@ -20,8 +20,8 @@ class UserSeeder extends Seeder
         DB::table('users')->delete();
 
         $users = [
-            ['id' => 1, 'nama' => 'Admin', 'kelas' => '10', 'jurusan_id' => 1, 'ekskul1' => 1,'ekskul2' => 2, 'ekskul3' => 3, 'username' => 'Admin123', 'password' => 'Admin123', 'role' => 'admin'],
-            ['id' => 2, 'nama' => 'User', 'kelas' => '10', 'jurusan_id' => 1, 'ekskul1' => 1,'ekskul2' => 2, 'ekskul3' => 3, 'username' => 'User123', 'password' => 'User123', 'role' => 'user'],
+            ['id' => 1, 'nama' => 'Admin', 'kelas' => '10', 'jurusan_id' => 1, 'ekskul1' => 1,'ekskul2' => 2, 'ekskul3' => 3, 'username' => 'Admin123', 'password' => bcrypt('Admin123'), 'role' => 'admin'],
+            ['id' => 2, 'nama' => 'User', 'kelas' => '10', 'jurusan_id' => 1, 'ekskul1' => 1,'ekskul2' => 2, 'ekskul3' => 3, 'username' => 'User123', 'password' => bcrypt('User123'), 'role' => 'user'],
         ];
 
         foreach($users as $user){

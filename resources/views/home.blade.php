@@ -46,10 +46,10 @@
                         </div>
                         <div class="modal-footer d-flex justify-content-start">
                             <div class="jadwal">
-                                Jadwal : Sabtu. 19-08-2023.
+                                Jadwal : {{ $item->hari }}.
                             </div>
                             <div class="jam">
-                                10.00
+                                {{ $item->jam }}
                             </div>
                         </div>
                         <div class="modal-footer">

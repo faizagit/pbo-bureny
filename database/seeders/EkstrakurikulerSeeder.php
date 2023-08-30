@@ -19,9 +19,9 @@ class EkstrakurikulerSeeder extends Seeder
         DB::table('ekstrakurikulers')->delete();
 
         $ekstrakurikulers = [
-            ['id' => 1, 'nm_ekskul' => 'Futsal', 'deskripsi' => 'Futsal', 'gambar' => 'Futsal.jpg'],
-            ['id' => 2, 'nm_ekskul' => 'Basket', 'deskripsi' => 'Basket', 'gambar' => 'Basket.jpg'],
-            ['id' => 3, 'nm_ekskul' => 'Voli', 'deskripsi' => 'Voli', 'gambar' => 'Voli.jpg'],
+            ['id' => 1, 'nm_ekskul' => 'Futsal', 'hari'=>'Sabtu', 'jam' => '08.00', 'deskripsi' => 'Futsal', 'gambar' => 'Futsal.jpg'],
+            ['id' => 2, 'nm_ekskul' => 'Basket', 'hari'=>'Sabtu', 'jam' => '08.00', 'deskripsi' => 'Basket', 'gambar' => 'Basket.jpg'],
+            ['id' => 3, 'nm_ekskul' => 'Voli', 'hari'=>'Sabtu', 'jam' => '08.00', 'deskripsi' => 'Voli', 'gambar' => 'Voli.jpg'],
         ];
 
         foreach($ekstrakurikulers as $ekskul){

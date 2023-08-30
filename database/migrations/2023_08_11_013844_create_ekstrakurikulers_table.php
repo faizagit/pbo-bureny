@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('ekstrakurikulers', function (Blueprint $table) {
             $table->id();
             $table->string('nm_ekskul');
+            $table->string('hari');
+            $table->string('jam');
             $table->string('deskripsi');
             $table->string('gambar');
             $table->timestamps();

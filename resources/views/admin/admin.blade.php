@@ -67,6 +67,7 @@
                 <li class="sidebar-title">Input</li>
                 <li class="{{ Route::current()->getName() == 'index_input' ? 'active-page' : '' }}">
                     <a href="{{ route('index_input') }}"><i data-feather="folder-plus"></i>Input Ekskul</a>
+                    <a href="{{ route('pengumuman') }}"><i data-feather="folder-plus"></i>Input Pengumuman</a>
                 </li>
             </ul>
         </div>

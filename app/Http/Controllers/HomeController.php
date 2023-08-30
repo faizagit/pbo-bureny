@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ekstrakurikuler;
+use App\Models\Pengumuman;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -13,8 +15,10 @@ class HomeController extends Controller
         return view('home', compact('ekskul'));
     }
     public function index_dashboard(){
-        $ekskul1 = User::with('ekskul1')->get();
-        return view('anggota.dashboard', compact('ekskul1'));
+        $user = Auth::id();
+        $ekskul = User::where('id', $user)->with('ekskulpertama', 'ekskulkedua', 'ekskulketiga')->first();
+        $pengumuman = Pengumuman::where('ekstrakurikuler_id', $ekskul->ekskul1)->get();
+        return view('anggota.dashboard', compact('ekskul', 'pengumuman'));
     }
     public function index_dashboard2(){
         return view('anggota.dashboard2');
