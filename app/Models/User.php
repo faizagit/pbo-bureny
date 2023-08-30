@@ -46,6 +46,10 @@ class User extends Authenticatable
         return $this->belongsTo(Ekstrakurikuler::class, 'ekskul3', 'id');
     }
 
+    public function absen(){
+        return $this->hasMany(Absensi::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *

@@ -34,29 +34,25 @@
                               </tr>
                             </thead>
                             <tbody>
+                              @forelse ($absen as $item)
                               <tr class="text-center">
-                                <th scope="row">1</th>
-                                <td>Faiz</td>
-                                <td>XII RPL 1</td>
+                                <th scope="row">{{$loop->iteration}}</th>
+                                <td>{{ $item->user->nama }}</td>
+                                <td>{{ $item->user->kelas }} {{ $item->user->jurusan->nm_jurusan }}</td>
+                                @if($item->keterangan == 'Hadir')
                                 <td class="text-success text-center">
                                   <span class="badge bg-success fs-6"> Absen </span>
                                 </td>
-                              </tr>
-                              <tr class="text-center">
-                                <th scope="row">2</th>
-                                <td>Satiria</td>
-                                <td>XI MM 1</td>
+                                @else
                                 <td class="text-danger text-center">
                                   <span class="badge bg-danger fs-6"> Izin </span>
-                                </td>
+                                </td>       
+                                @endif
+                              @empty
+                              <tr>
+                                <th scope="row" colspan="4">Data belum tersedia</th>
                               </tr>
-                              <tr class="text-center">
-                                <th scope="row">3</th>
-                                <td>Tasmuin</td>
-                                <td> X BDP 3</td>
-                                <td class="text-danger text-center">
-                                  <span class="badge bg-danger fs-6"> Izin </span>
-                                </td>
+                              @endforelse
                               </tr>
                             </tbody>
                           </table>

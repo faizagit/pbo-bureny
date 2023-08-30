@@ -13,7 +13,6 @@ class PengumumanController extends Controller
         // dd($request);
         $validatedData = $request->validate([
             'tanggal' => 'required',
-            'jam' => 'required',
             'pengumuman' => 'required|min:3',
             'ekstrakurikuler_id' => 'required',
         ]);
@@ -36,7 +35,6 @@ class PengumumanController extends Controller
        
         $validatedData = $request->validate([
             'tanggal' => 'required',
-            'jam' => 'required',
             'pengumuman' => 'required',
         ]);
         // dd($validatedData);

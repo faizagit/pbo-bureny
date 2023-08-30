@@ -24,7 +24,7 @@ class IzinController extends Controller
         // $today = 'Sabtu';
         // dd($today);
         $hadir = Absensi::where(['user_id' => $user, 'tanggal' => date('Y-m-d'), 'keterangan' => 'Hadir', 'ekstrakurikuler_id' => $ekskul->id])->first();
-        $izin = Absensi::where(['user_id' => $user, 'tanggal' => date('Y-m-d'), 'keterangan' => 'Sakit', 'ekstrakurikuler_id' => $ekskul->id])->first();
+        $izin = Absensi::where(['user_id' => $user, 'tanggal' => date('Y-m-d'), 'keterangan' => 'Izin', 'ekstrakurikuler_id' => $ekskul->id])->first();
 
         if (isset($izin)) {
             toastr()->error('Anda sudah izin', 'Gagal!');
@@ -42,7 +42,7 @@ class IzinController extends Controller
                     'tanggal' => date('Y-m-d'),
                     'jam_absen' => date('H:i:s'),
                     'user_id' => $user,
-                    'keterangan' => "Sakit",
+                    'keterangan' => "Izin",
                     'ekstrakurikuler_id' => $ekskul->id,
                 ]);
                 Izin::create([

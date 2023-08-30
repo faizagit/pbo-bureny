@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('pengumumans', function (Blueprint $table) {
             $table->id();
             $table->date('tanggal');
-            $table->string('jam');
             $table->string('pengumuman');
             $table->unsignedBigInteger('ekstrakurikuler_id');
             $table->foreign('ekstrakurikuler_id')->references('id')->on('ekstrakurikulers');

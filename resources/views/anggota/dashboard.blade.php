@@ -28,7 +28,7 @@
                             <div class="col-md-6">
                                 <div class="card" style="border: 3px solid; background-color:rgb(190, 240, 255)">
                                     <div class="card-body pt-0">
-                                        @foreach ($pengumuman as $item)
+                                        @forelse ($pengumuman as $item)
                                         <div class="d-flex gap-2 py-3" style="border-bottom: 1px solid;">
                                             <div class="icon text-bg-primary rounded-circle d-flex justify-content-center align-items-center"
                                                 style="width: 50px; height: 50px;">
@@ -39,7 +39,13 @@
                                                 <p class="m-0">{{ $ekskul->ekskulpertama->jam }}</p>
                                             </div>
                                         </div>
-                                        @endforeach
+                                        @empty
+                                        <div class="d-flex gap-2 py-3" style="border-bottom: 1px solid;">
+                                            <div class="jadwal">
+                                                <p class="fs-5 m-0">Belum ada pengumuman</p>
+                                            </div>
+                                        </div>
+                                        @endforelse
                                     </div>
                                 </div>
                             </div>
@@ -64,11 +70,11 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card" style="border: 1px solid">
+                                    <!-- <div class="card" style="border: 1px solid">
                                         <div class="card-body text-center">
                                             <h6>Kalender</h6>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <div class="modal fade " id="modal" tabindex="-1" aria-labelledby="exampleModalLabel"

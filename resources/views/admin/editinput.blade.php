@@ -48,7 +48,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="formFile" class="form-label">Gambar Ekskul</label>
-                                <input class="form-control" name="gambar @error('gambar') is-invalid @enderror" type="file" id="formFile" value="{{ old('gambar', $ekskul->gambar) }}" required>
+                                <input class="form-control" name="gambar @error('gambar') is-invalid @enderror" type="file" id="formFile">
                                 @error('gambar')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror

@@ -12,4 +12,9 @@ class Pengumuman extends Model
     protected $table = "pengumumans";
 
     protected $guarded = [];
+
+    public function ekskul()
+    {
+        return $this->belongsTo(Ekstrakurikuler::class, 'ekstrakurikuler_id', 'id');
+    }
 }

@@ -19,13 +19,6 @@
                                 @enderror
                             </div>
                             <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Jam</label>
-                                <input type="text" class="form-control @error('jam') is-invalid @enderror" id="exampleInputPassword1" name="jam" required>
-                                @error('jam')
-                                    <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
-                            </div>
-                            <div class="mb-3">
                                 <label for="exampleFormControlTextarea1" class="form-label">Pengumuman</label>
                                 <textarea class="form-control @error('pengumuman') is-invalid @enderror" name="pengumuman" id="exampleFormControlTextarea1" rows="3"
                                     placeholder="Deskripsi Ekskul" required></textarea>
