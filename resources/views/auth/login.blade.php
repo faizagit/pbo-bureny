@@ -4,12 +4,12 @@
 
 @section('content')
     <div class="login mx-auto my-5" style=" width:60%">
-    @if(session()->has('loginError'))
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        {{ session('loginError') }}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    @endif
+        @if (session()->has('loginError'))
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{ session('loginError') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
         <div class="container">
             <div class="card">
                 <div class="card-body p-0">
@@ -28,12 +28,14 @@
                                 @csrf
                                 <div class="form">
                                     <div class="mt-5">
-                                      <label for="exampleInputEmail1" class="form-label ">Username</label>
-                                      <input type="email" class="form-control rounded-pill" name="username" id="exampleInputEmail1" aria-describedby="emailHelp" autofocus>
+                                        <label for="exampleInputEmail1" class="form-label ">Username</label>
+                                        <input type="email" class="form-control rounded-pill" name="username"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp" autofocus>
                                     </div>
                                     <div class="mt-4">
-                                      <label for="exampleInputPassword1" class="form-label ">Password</label>
-                                      <input type="password" class="form-control rounded-pill" name="password" id="exampleInputPassword1">
+                                        <label for="exampleInputPassword1" class="form-label ">Password</label>
+                                        <input type="password" class="form-control rounded-pill" name="password"
+                                            id="exampleInputPassword1">
                                     </div>
                                     <div class="login d-flex justify-content-center mt-5">
                                         <button class="btn btn-danger rounded-pill w-100">Login</button>
